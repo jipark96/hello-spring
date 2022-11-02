@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+
 @SpringBootTest
 @Transactional
 class MemberServiceIntegrationTest {
@@ -25,7 +26,7 @@ class MemberServiceIntegrationTest {
     void 회원가입() {
         //given
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring1");
         //when
         Long saveId = memberService.join(member);
         //then

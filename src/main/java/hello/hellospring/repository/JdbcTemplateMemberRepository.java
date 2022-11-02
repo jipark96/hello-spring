@@ -25,7 +25,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     @Override
-    public Member Save(Member member) {
+    public Member save(Member member) {
          SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
          jdbcInsert.withTableName("member").usingGeneratedKeyColumns("id");
 

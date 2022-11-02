@@ -1,13 +1,13 @@
 package hello.hellospring.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Member {
 
-    @Id @
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//    @Column(name="username") 만약 username 일때 사용
     private  String name;
 
     public Long getId() {
